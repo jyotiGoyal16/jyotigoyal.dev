@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: light-dark(#eef6fc, #0b1624);
+  --color-foreground: light-dark(#0b1624, #f0f6ff);
+  --color-surface-1: light-dark(#ffffff, #102033);
+  --color-surface-2: light-dark(#e2eef8, #152a40);
+  --color-surface-elevated: light-dark(#f8fbff, #1a3350);
+  --color-border: light-dark(#c5d8eb, #1e3a52);
+  --color-border-strong: light-dark(#94b8d9, #2a4d6e);
+  --color-muted: light-dark(#4a6682, #9bb0c8);
+  --color-subtle: light-dark(#5f7a96, #6b8aa8);
+  --color-accent: light-dark(#0284c7, #38bdf8);
+  --color-accent-hover: light-dark(#0369a1, #7dd3fc);
+  --color-on-accent: light-dark(#f0f9ff, #082f49);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+/* Raised surfaces — dark values default, overridden for OS light mode */
+.portfolio-shadow-card {
+  box-shadow:
+    0 0 0 1px rgb(56 189 248 / 0.07),
+    0 12px 40px -20px rgb(0 0 0 / 0.55);
+}
+
+.portfolio-shadow-header {
+  box-shadow:
+    0 1px 0 0 rgb(56 189 248 / 0.08),
+    0 8px 32px -12px rgb(0 0 0 / 0.5);
+}
+
+.portfolio-shadow-timeline-dot {
+  box-shadow: 0 0 14px rgb(56 189 248 / 0.55);
+}
+
+@media (prefers-color-scheme: light) {
+  .portfolio-shadow-card {
+    box-shadow:
+      0 0 0 1px rgb(2 132 199 / 0.1),
+      0 10px 36px -18px rgb(11 22 36 / 0.12);
+  }
+
+  .portfolio-shadow-header {
+    box-shadow:
+      0 1px 0 0 rgb(2 132 199 / 0.12),
+      0 6px 24px -10px rgb(11 22 36 / 0.08);
+  }
+
+  .portfolio-shadow-timeline-dot {
+    box-shadow: 0 0 12px rgb(2 132 199 / 0.4);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.portfolio-project-card {
+  transition-property: transform, box-shadow;
+  transition-duration: 300ms;
+}
+
+.portfolio-project-card:hover {
+  box-shadow:
+    0 0 0 1px rgb(56 189 248 / 0.14),
+    0 16px 48px -24px rgb(0 0 0 / 0.58);
+}
+
+@media (prefers-color-scheme: light) {
+  .portfolio-project-card:hover {
+    box-shadow:
+      0 0 0 1px rgb(2 132 199 / 0.16),
+      0 14px 44px -20px rgb(11 22 36 / 0.14);
+  }
+}
+
+.surface-depth {
+  background:
+    radial-gradient(
+      120% 85% at 50% -35%,
+      light-dark(rgb(56 189 248 / 0.12), rgb(56 189 248 / 0.07)),
+      transparent 58%
+    ),
+    light-dark(#eef6fc, #0b1624);
+}
+
+::selection {
+  background-color: light-dark(rgb(2 132 199 / 0.16), rgb(56 189 248 / 0.18));
+  color: light-dark(#0b1624, #f0f6ff);
 }
