@@ -13,6 +13,7 @@ export default function FadeIn({
   delay?: number;
 }) {
   const reduceMotion = useReducedMotion();
+  const y: any = 8;
 
   if (reduceMotion) {
     return <div className={className}>{children}</div>;
