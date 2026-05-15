@@ -2,6 +2,18 @@ import { experience } from "@/lib/site";
 import Container from "@/components/ui/Container";
 import FadeIn from "@/components/motion/FadeIn";
 
+function parseBold(text: string) {
+  return text.split(/\*\*(.*?)\*\*/).map((part, i) =>
+    i % 2 === 1 ? (
+      <strong key={i} className="font-semibold text-accent">
+        {part}
+      </strong>
+    ) : (
+      part
+    ),
+  );
+}
+
 export default function ExperienceSection() {
   return (
     <section
@@ -33,7 +45,7 @@ export default function ExperienceSection() {
                 </div>
                 <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted marker:text-accent/50">
                   {job.bullets.map((b) => (
-                    <li key={b}>{b}</li>
+                    <li key={b}>{parseBold(b)}</li>
                   ))}
                 </ul>
               </li>

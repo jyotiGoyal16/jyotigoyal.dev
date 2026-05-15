@@ -68,7 +68,7 @@ export const skillCards = [
   },
   {
     title: "Tooling & Quality",
-    items: ["Jest", "Vite", "Webpack", "CI/CD", "Jenkins", "GitHub"],
+    items: ["Jest", "Vite", "Webpack", "CI/CD", "Jenkins", "GitHub Actions"],
   },
 ];
 
@@ -80,14 +80,16 @@ export const experience = [
     location: "Remote",
     period: "Jun 2021 — Apr 2026",
     bullets: [
-      "Architected scalable frontend systems across B2B SaaS platforms using React, Next.js, and TypeScript.",
-      "Led migration from Ruby Rails frontend to Next.js SSR, reducing page load time from 6.5s to 2s.",
-      "Improved Lighthouse SEO from 72 to 97 and performance from 68 to 93 through Core Web Vitals and rendering optimizations.",
-      "Migrated build tooling from Webpack to Vite after internal benchmarking, reducing dev-server cold start by 10x.",
-      "Built internal A/B testing and analytics platform, driving 300+ additional monthly leads.",
-      "Redesigned frontend data layer from REST to GraphQL, reducing payload size by 40% and improving rendering efficiency.",
-      "Standardized frontend architecture using ESLint, Husky, and reusable Ant Design patterns, reducing code inconsistencies by 70%.",
-      "Led frontend engineering standards through mentorship, architectural reviews, and code quality initiatives, improving development velocity and reducing onboarding friction across teams.",
+      "Built **scalable frontend systems** across B2B SaaS platforms using **React**, **Next.js**, and **TypeScript**.",
+      "Led migration from Ruby Rails frontend to **Next.js SSR**, reducing page load time from **6.5s to 2s**.",
+      "Improved **Lighthouse SEO** score from **72 to 97** and performance from **68 to 93** through **rendering optimization**, **lazy loading**, and **Core Web Vitals** improvements.",
+      "Led migration of frontend build pipeline from **Webpack to Vite** after internal benchmarking, reducing dev-server cold start by **10x** and improving development velocity.",
+      "Implemented **GitHub Actions workflows** to automate frontend build and deployment processes across staging and production environments.",
+      "Proactively optimized the upcoming voyages feed using **TanStack Virtual** and **Intersection Observer**, reducing mounted DOM nodes by **80%** and improving scroll performance.",
+      "Redesigned frontend data layer by transitioning shared workflows from **REST to GraphQL** using **Apollo Client**, reducing payload size by **40%**.",
+      "Built internal **A/B testing** and analytics platform, driving **300+** additional monthly leads.",
+      "Standardized frontend architecture using **ESLint**, **Husky**, and reusable **Ant Design** patterns, reducing code inconsistencies by **70%**.",
+      "Led frontend quality initiatives and mentorship efforts to improve development velocity.",
     ],
   },
   {
@@ -96,11 +98,10 @@ export const experience = [
     location: site.location,
     period: "Dec 2018 — Jun 2021",
     bullets: [
-      "Built frontend architecture for RouteMax, a freight planning platform used across 250+ terminals and 12.5k+ optimized routes.",
-      "Developed complex planner and map-based workflows, reducing freight planning time by 45%.",
-      "Refactored legacy React class components into modular hooks-based architecture using Context API and MobX, accelerating feature development by 35%.",
-      "Built React Native driver application with realtime navigation and communication workflows for 16k+ daily drivers.",
-      "Established frontend testing standards with Jest and Enzyme, achieving 90% unit test coverage across critical modules.",
+      "Built **scalable frontend architecture** for RouteMax used across **250+ terminals** and **12.5k+** optimized routes, reducing freight planning time by **45%**.",
+      "Refactored legacy React class components into **modular hooks-based architecture** using **Context API and MobX** - accelerating feature development by **35%**.",
+      "Built **React Native** driver application with realtime navigation and communication workflows for **16k+** daily drivers.",
+      "Established frontend testing standards with **Jest and Enzyme**, achieving **90% unit test coverage** across critical modules.",
     ],
   },
 ];
@@ -129,5 +130,13 @@ export const featuredProjects = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     repo: "https://github.com/jyotiGoyal16/portfolio",
     demo: "https://portfolio-demo.vercel.app",
+  },
+  {
+    name: "OTP Input",
+    description:
+      "A reusable, accessible OTP input component with digit-by-digit input, keyboard navigation, clipboard paste, and accessibility features.",
+    stack: ["React.js", "Vite", "JavaScript"],
+    repo: "https://github.com/jyotiGoyal16/otp-input",
+    demo: "",
   },
 ];
